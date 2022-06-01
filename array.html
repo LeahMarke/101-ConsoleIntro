@@ -7,24 +7,24 @@
   </head>
   <body>
     <h1>Share one word that describes how you feel in the box below...</h1>
-    <form>
-      <label for="new-word">New Word</label><br />
-      <input type="text" id="new-word" name="new-word" /><br />
 
-      <button onclick="addNewWord()">Submit Word</button>
+    <label for="new-word">New Word</label><br />
+    <input type="text" id="new-word" name="new-word" /><br />
 
-      <article id="text-box"></article>
-      <button onclick="addNewElement()">Click Me</button>
-    </form>
+    <button onclick="addNewWord()">Submit Word</button>
+
+    <article id="text-box"></article>
+    <button onclick="addNewElement()">Click Me</button>
+
     <script>
       // Create an array called listOfWords
       // Create a variable to count the number of clicks
 
       const listOfWords = ["Beautiful", "Grand", "Brave", "Powerful"];
       const addNewWord = () => {
-        const newWord = document.getElementById("new-word");
+        const newWord = document.getElementById("new-word").value;
         listOfWords.push(newWord);
-        return console.log(listOfWords);
+        console.log(listOfWords);
       };
 
       let clicks = 0;
